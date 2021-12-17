@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+<bean id="audi" class="com.jnit.Car">
+	<property name="fuel" value="Petrol"/>
+	<property name="speed" value="150"/>
+</bean>
+
+<bean id="volvo" class="com.jnit.Bus">
+	<property name="fuel" value="Diesel"/>
+	<property name="speed" value="100"/>
+</bean>
+
+<bean id="lotus" class="com.jnit.Travel">
+	<property name="vehicle">
+		<ref bean="volvo" />
+	</property>
+</bean>
+
+</beans>
